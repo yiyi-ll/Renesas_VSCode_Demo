@@ -1,0 +1,33 @@
+{
+  "configurations": [
+    {
+      "name": "Generic",
+      "configurationProvider": "ms-vscode.cmake-tools",
+      "includePath": [
+        "./ra/fsp/inc/",
+        "./ra/fsp/inc/api/",
+        "./ra/fsp/inc/instances/",
+        "./ra/fsp/inc/",
+        "./ra/fsp/src/bsp/cmsis/Device/RENESAS/Include/",
+        "./ra/fsp/src/bsp/mcu/all/",
+        "./ra/fsp/src/bsp/mcu/ra2l1/",
+        "./ra/arm/CMSIS_5/CMSIS/Core/Include/",
+        "./ra_gen/",
+        "./ra_cfg/fsp_cfg/bsp/",
+        "./ra_cfg/fsp_cfg/"        
+      ],
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE"
+      ],
+      "intelliSenseMode": "clang-x64",
+      "compilerArgs": [],
+      "browse": {
+        "path": [],
+        "limitSymbolsToIncludedHeaders": true
+      }
+    }
+  ],
+  "version": 4
+}
