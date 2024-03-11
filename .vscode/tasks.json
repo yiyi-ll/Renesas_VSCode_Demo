@@ -9,9 +9,9 @@
   {
       "label": "_makebuildfolder",
       "type": "shell",
-      "command": "mkdir",//Windows下面改为dir
+      "command": "mkdir",
       "args": [
-          "-p",//Windows下面直接注释掉
+          "-p",
           "\"${workspaceFolder}\""
       ],
       "problemMatcher": [],
@@ -20,7 +20,7 @@
   {
       "label": "env",
       "type": "shell",
-      "command": "env",  //Windows下面改为set
+      "command": "env",
       "args": [],
       "options": {
           "cwd": "${workspaceFolder}"
@@ -45,10 +45,10 @@
   {
       "label": "clean",
       "type": "shell",
-      "command": "rm",//Windows下面rmdir
+      "command": "rm",
       "args": [
-          "-rf",  //Windows下面"/s","/q".
-          "./build"  //Windows下面改./build为build
+          "-rf",
+          "./build"
       ],
       "options": {
           "cwd": "${workspaceFolder}"
@@ -77,7 +77,7 @@
           // "--erase",
           // "chip",
           "--target",
-          "r7fa2l1ab",   // r7fa4m2ad 、 r7fa6m5bh
+          "r7fa2l1ab",   //r7fa2l1ab
           "--pack",
           "/d/Keil_v5/ARM/Packs/Renesas/RA_DFP/5.2.0",
           "./build/FSP_Project.elf"
