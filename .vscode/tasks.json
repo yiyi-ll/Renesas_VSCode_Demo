@@ -1,0 +1,111 @@
+{
+  "version": "2.0.0",
+  "options": {
+    "env": {
+        "ARM_TOOLCHAIN_PATH": "D:\\GNU Arm Embedded Toolchain\\10 2021.10\\bin",  // Windows下面根据安装路径设置
+    }
+ },
+ "tasks": [
+  {
+      "label": "_makebuildfolder",
+      "type": "shell",
+      "command": "mkdir",
+      "args": [
+          "-p",
+          "\"${workspaceFolder}\""
+      ],
+      "problemMatcher": [],
+      "group": "none"
+  },
+  {
+      "label": "env",
+      "type": "shell",
+      "command": "env",
+      "args": [],
+      "options": {
+          "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+  },
+  {
+      "label": "cmake",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+          "-G","MinGW Makefiles",
+          "-DCMAKE_TOOLCHAIN_FILE=cmake/gcc.cmake",
+          "-H.",
+          "-B./build"
+      ],
+      "options": {
+          "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+  },
+  {
+      "label": "Clean",
+      "type": "shell",
+      "command": "rm",
+      "args": [
+          "-rf",
+          "./build"
+      ],
+      "options": {
+          "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+  },
+  {
+      "label": "make",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+          "--build",
+          "build"
+      ],
+      "options": {
+          "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+  },
+  {
+      "label": "flash",
+      "type": "shell",
+      "command": "pyocd",
+      "args": [
+          "flash",
+          // "--erase",
+          // "chip",
+          "--target",
+          "r7fa2l1ab",   //r7fa2l1ab
+          "--pack",
+          "E:\\3rdparty\\Renesas\\RA_DFP.5.5.0\\SVD\\R7FA2L1AB.svd",
+          "./build/FSP_Project.elf"
+      ],
+      "options": {
+          "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+  },
+  {
+      "label": "Build",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+          "_makebuildfolder",
+          "env",
+          "cmake",
+          "make"
+      ],
+      "problemMatcher": []
+  },
+  {
+      "label": "Build_Flash",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+          "Build",
+          "flash",
+      ],
+      "problemMatcher": []
+  }        
+]
+}

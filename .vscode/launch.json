@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "name": "RA Debug with PyOCD",            
+      "cwd": "${workspaceRoot}",
+      "executable": "./build/FSP_Project.elf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "runToEntryPoint": "main",
+      "servertype": "pyocd",
+      "targetId":"r7fa2l1ab", // r7fa2l1ab
+      "armToolchainPath": "D:\\GNU Arm Embedded Toolchain\\10 2021.10\\bin",
+      "svdFile": "E:\\3rdparty\\Renesas\\RA_DFP.5.5.0\\SVD\\R7FA2L1AB.svd",   //R7FA2L1AB.svd
+      "showDevDebugOutput": "both",
+      "preLaunchTask": "Build",
+      "cmsisPack": "E:\\3rdparty\\Renesas\\Renesas.RA_DFP.5.5.0.pack"
+  }
+  ],
+  "version": "0.2.0"
+}
