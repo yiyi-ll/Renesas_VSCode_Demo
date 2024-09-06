@@ -80,7 +80,7 @@
           "r7fa2l1ab",   //r7fa2l1ab
           "--pack",
           "E:\\3rdparty\\Renesas\\RA_DFP.5.5.0\\SVD\\R7FA2L1AB.svd",
-          "./build/FSP_Project.elf"
+          "./build/Renesas_VSCode_Demo.elf"
       ],
       "options": {
           "cwd": "${workspaceFolder}"

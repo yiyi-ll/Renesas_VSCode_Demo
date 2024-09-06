@@ -1,4 +1,5 @@
 # Renesas_VSCode_Demo
+
 vscode搭建Renesas开发环境，编译并下载调试
 
 0.Windows下安装pyocd，libusb
@@ -18,3 +19,9 @@ set(CMAKE_FIND_ROOT_PATH "D:/Tools/GNU Arm Embedded Toolchain/10 2021.10/bin")  
 SET(CMAKE_C_LINK_EXECUTABLE "\"${CMAKE_LINKER}\" ${CMAKE_EXE_LINKER_FLAGS} <OBJECTS> -Wl,--start-group ${RASC_CMAKE_EXE_LIBRARY_NAME_FLAGS} -Wl,--end-group --specs=nosys.specs")
 
 SET(CMAKE_CXX_LINK_EXECUTABLE "\"${CMAKE_LINKER}\" ${CMAKE_EXE_LINKER_FLAGS} <OBJECTS> -Wl,--start-group ${RASC_CMAKE_EXE_LIBRARY_NAME_FLAGS} -Wl,--end-group --specs=nosys.specs")
+
+3.添加调试信息
+
+在CMakeLists.txt文件添加
+
+set(CMAKE_BUILD_TYPE Debug)

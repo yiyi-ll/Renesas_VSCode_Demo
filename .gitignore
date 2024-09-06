@@ -3,3 +3,6 @@ build/
 .vscode/c_cpp_properties.json
 .vscode/cmake-kits.json
 .vscode/settings.json
+compile_commands.json
+buildinfo.json
+.api_xml

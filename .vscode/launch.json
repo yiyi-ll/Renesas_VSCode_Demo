@@ -3,7 +3,7 @@
     {
       "name": "RA Debug with PyOCD",            
       "cwd": "${workspaceRoot}",
-      "executable": "./build/FSP_Project.elf",
+      "executable": "./build/Renesas_VSCode_Demo.elf",
       "request": "launch",
       "type": "cortex-debug",
       "runToEntryPoint": "main",

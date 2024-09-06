@@ -9,7 +9,7 @@ set(CMAKE_CONFIGURATION_TYPES Debug Release RelWithDebInfo MinSizeRel)
 cmake_minimum_required(VERSION 3.16.4)
 
 # Project configuration
-project(FSP_Project
+project(Renesas_VSCode_Demo
 	VERSION 1.0.0
 	LANGUAGES C CXX ASM)
 
